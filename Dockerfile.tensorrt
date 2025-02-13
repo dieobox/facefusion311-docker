@@ -6,7 +6,7 @@ ENV PIP_BREAK_SYSTEM_PACKAGES=1
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/python3.12/dist-packages/tensorrt_libs
 
 WORKDIR /facefusion311
-
+RUN apt-get upgrade --fix-missing
 RUN apt-get update
 RUN apt-get install python3.12 -y
 RUN apt-get install python-is-python3 -y
